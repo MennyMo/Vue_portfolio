@@ -11,7 +11,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -38,10 +38,13 @@ const routes = [
             component: () => import( '../views/About/Enyata.vue'),
 
           }
-        ]
-      
-    
-    
+        ]  
+  },
+  { 
+    // wild card
+    path: '*', 
+    name: '404',
+    component: () => import( '../views/404.vue'),
   }
 ]
 
